@@ -1,20 +1,11 @@
-const renderContent = () => {
-  switch (activeTab) {
-    case 'dashboard':
-      return <Dashboard />;
-    case 'expenses':
-      return <ExpensesPage />;
-    case 'investments':
-      return <InvestmentsPage />;
-    case 'analytics':
-      return <AnalyticsPage />;
-    case 'goals':
-      return <GoalsPage />;
-    case 'calendar':
-      return <CalendarPage />;
-    case 'settings':
-      return <SettingsPage />;
-    default:
-      return <Dashboard />;
-  }
-};
+@@ .. @@
+import { ExpensesPage } from './components/expenses/ExpensesPage';
+import { InvestmentsPage } from './components/investments/InvestmentsPage';
+import { SettingsPage } from './components/settings/SettingsPage';
++import { AnalyticsPage } from './components/analytics/AnalyticsPage';
++import { GoalsPage } from './components/goals/GoalsPage';
++import { CalendarPage } from './components/calendar/CalendarPage';
+import { LoadingSpinner } from './components/ui/LoadingSpinner';
+
+function AppContent() {
+}
