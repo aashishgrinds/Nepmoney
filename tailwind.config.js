@@ -1,10 +1,1 @@
-@@ .. @@
-/** @type {import('tailwindcss').Config} */
-export default {
-   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-+  darkMode: 'class',
-   theme: {
-     extend: {
-@@ .. @@
-   plugins: [],
- };
+{"code":"rate-limited","message":"You have hit the rate limit. Please upgrade to keep chatting.","providerLimitHit":false,"isRetryable":true}
