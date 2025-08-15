@@ -3,6 +3,9 @@
      if (active && payload && payload.length) {
        const data = payload[0].payload;
        return (
+       )
+     }
+   }
 -        <div className="bg-white p-3 border border-gray-200 rounded-lg shadow-lg">
 -          <p className="font-medium">{data.category}</p>
 +        <div className="bg-white dark:bg-gray-800 p-3 border border-gray-200 dark:border-gray-600 rounded-lg shadow-lg">
