@@ -51,15 +51,15 @@ export function AddInvestmentForm() {
 
   return (
     <Card>
-      <h3 className="text-lg font-semibold text-gray-900 mb-6">Add New Investment</h3>
+      <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-6">Add New Investment</h3>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">Stock</label>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">Stock</label>
             <select
               value={formData.stockId}
               onChange={(e) => setFormData({ ...formData, stockId: e.target.value })}
-              className="block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              className="block w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 px-3 py-2 text-sm shadow-sm focus:border-blue-500 dark:focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:focus:ring-blue-400"
               required
             >
               <option value="">Select a stock</option>
@@ -70,7 +70,7 @@ export function AddInvestmentForm() {
               ))}
             </select>
             {selectedStock && (
-              <p className="text-xs text-gray-600">
+              <p className="text-xs text-gray-600 dark:text-gray-400">
                 Current Price: NPR {selectedStock.currentPrice.toFixed(2)}
               </p>
             )}
@@ -110,12 +110,13 @@ export function AddInvestmentForm() {
 
         {formData.shares && formData.purchasePrice && (
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-            <p className="text-sm font-medium text-blue-900">Investment Summary</p>
-            <p className="text-sm text-blue-700">
+          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+            <p className="text-sm font-medium text-blue-900 dark:text-blue-100">Investment Summary</p>
+            <p className="text-sm text-blue-700 dark:text-blue-300">
               Total Cost: NPR {(parseInt(formData.shares || '0') * parseFloat(formData.purchasePrice || '0')).toFixed(2)}
             </p>
             {selectedStock && (
-              <p className="text-sm text-blue-700">
+              <p className="text-sm text-blue-700 dark:text-blue-300">
                 Current Value: NPR {(parseInt(formData.shares || '0') * selectedStock.currentPrice).toFixed(2)}
               </p>
             )}
